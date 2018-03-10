@@ -1,0 +1,24 @@
+<!-- angular creates a component from form -->
+
+<form #inputGramForm="ngForm" (ngSubmit)="addInstagram()">
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title"  required class="form-control"
+            placeholder="Please enter a title for your post"
+            ngModel>
+  </div>
+
+  <div class="form-group">
+    <label for="imageUrl">Image URL</label>
+    <input type="text" name="imageUrl" id="imageUrl"  required class="form-control"
+           placeholder="Please enter your image's URL"
+           ngModel>
+  </div>
+
+  <button type="submit" class="btn btn-success form-control"
+      [disabled]="inputGramForm.invalid">
+    Add
+  </button>
+
+</form>

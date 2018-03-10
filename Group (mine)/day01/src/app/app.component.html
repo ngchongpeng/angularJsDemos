@@ -1,0 +1,27 @@
+<h1>RSVP</h1>
+
+<app-rsvp (rsvp)="newRSVP($event)"></app-rsvp>
+
+<ul>
+  <li *ngFor="let r of allRSVPS; let i=index">
+    <h5>{{ r.name }}</h5>
+    <code>Phone: {{ r.phone }}</code>
+    <code>Email: {{ r.email }}</code>
+    <i>{{ r.attending }}</i>
+    <i>{{ i }}</i>
+  </li>
+</ul>
+
+<!--
+<h1>My First App</h1>
+
+<app-image *ngFor="let i of images" [pic]="i">
+
+</app-image>
+<h2>This has an event handler</h2>
+<app-image 
+  *ngIf="images.length <= 0"
+  [pic]="myImage"
+  (imageClicked)="myImageHasBeenClicked($event)">
+</app-image>
+-->

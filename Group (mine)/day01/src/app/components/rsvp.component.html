@@ -1,0 +1,45 @@
+<form #rsvpForm="ngForm" (ngSubmit)="processRSVP()">
+
+  <h4 *ngIf="rsvpForm.invalid">Please fill in all the required fields</h4>
+  <h4 *ngIf="rsvpForm.valid">You can now RSVP!</h4>
+
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td>
+        <input type="text" name="name" ngModel required>
+      </td>
+    </tr>
+    <tr>
+
+      <td>Phone:</td>
+      <td>
+        <input type="text" name="phone" ngModel required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Email:</td>
+      <td>
+        <input type="password" name="email" ngModel required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Attending:</td>
+      <td>
+        <input type="checkbox" name="attending" ngModel>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit" [disabled]="rsvpForm.invalid">
+          RSVP
+        </button>
+      </td>
+    </tr>
+  </table>
+
+</form>

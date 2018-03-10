@@ -1,0 +1,9 @@
+<mat-nav-list>
+
+  <mat-list-item *ngFor="let c of customers">
+    <a matline [routerLink]="['/details', c.customerId]">
+      <code>{{ c.name }}</code>
+    </a>
+  </mat-list-item>
+
+</mat-nav-list>
